@@ -1,0 +1,28 @@
+mcc -o majAnalyzer -W main:majAnalyzer -T link:exe -d '/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_testing' -v '/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/codice_finale.m' -a '/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/codice_finale.m' -a '/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/david0.mat' -a '/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/funzioni e acquisizioni' 
+Compiler version: 6.1 (R2015b)
+
+Dependency analysis by REQUIREMENTS.
+
+[Warning: Adding path "/Users/Pasquale/Documents/MATLAB/Programmi MATLAB" to
+Compiler path instance.] 
+[] 
+Parsing file "/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/codice_finale.m"
+	(Referenced from: "Compiler Command Line").
+Deleting 5 temporary MEX authorization files.
+Removing: '/tmp/01ec058RskD_7872.auth'.
+Removing: '/tmp/01ec0xS0Vba_7872.auth'.
+Removing: '/tmp/01ec0KhW0oy_7872.auth'.
+Removing: '/tmp/01ec0YOugno_7872.auth'.
+Removing: '/tmp/01ec04jRjkF_7872.auth'.
+Generating file "/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_testing/readme.txt".
+Generating file "/Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_testing/run_majAnalyzer.sh".
+Packaging...
+Adding custom icon /Applications/MATLAB_R2015b.app/toolbox/compiler/Resources/default_icon.icns to /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_testing/majAnalyzer.app.
+Creating the bundle...
+Copying /Applications/MATLAB_R2015b.app/toolbox/compiler/maci64/setup.app to /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_redistribution/MyAppInstaller_web.app.
+Copying /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_redistribution/bundle.zip to /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_redistribution/MyAppInstaller_web.app/Contents/Resources/bundle.zip.
+Copying /Applications/MATLAB_R2015b.app/toolbox/compiler/Resources/default_splash.png to /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_redistribution/MyAppInstaller_web.app/Contents/Resources/splash.png.
+Copying /Applications/MATLAB_R2015b.app/toolbox/compiler/Resources/default_icon.icns to /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_redistribution/MyAppInstaller_web.app/Contents/Resources/installer.icns.
+Web based installer created at /Users/Pasquale/Documents/MATLAB/Programmi MATLAB/majAnalyzer/for_redistribution/MyAppInstaller_web.app.
+Packaging complete.
+Elapsed packaging time was: 42 seconds.
