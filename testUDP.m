@@ -5,6 +5,8 @@ clc
 close all;
 clear all;
 warning('off','all')
+
+%dichiarazione variabili
 c=0;
 LstTime = 5;
 aparray = [];
@@ -18,8 +20,8 @@ ms = 0;
 c = 0;
 dim = 0;
 aparray = [];
-update = 59;
 figure;
+nternePrec = 0;
 
 while 1
     fopen(UDPComIn)
@@ -29,8 +31,7 @@ while 1
     fclose(UDPComIn)
     
     %ricevo i dati
-    if isempty(csvdata)==1  break; end;
-    ms = 1000*time/16 
+    if isempty(csvdata)==1  break; end; 
     %periodo di campionameno effettivo in ms
     %il fatto che ms sia prossimo (per segnale stabile) al periodo di
     %campionamento indicato significa che la perdità di campioni è minima
@@ -48,16 +49,26 @@ while 1
     dim = size(scan,1);
     for i=1:dim
         g = 4;
-        g = scan{i};
+        g = scan{i,1};
         g = str2num(g);
+        if (isempty(g))
+            g = 0;
+        end
+        %può capitare che un dato sia mancante, con questo controllo non
+        %avvengono blocchi dell'applicazione
         aparray(i+c) = g;
     end
     c = size(aparray,2);
     resto = mod(c,3);
     c = (c-resto);
-    aparray1 = aparray(1:c);
-    alog = vec2mat (aparray1,3);
+    aparray = aparray(1:c);
+    alog = vec2mat (aparray,3);
     alog = alog';
+    
+    %verifico il periodo di campionamento
+    ms = 1000*time/((c/3)-nternePrec);
+    nternePrec = c/3;
+   
     
     hold on;
     %asse X
@@ -75,6 +86,5 @@ while 1
     plot(alog(3,:),'b'); grid on; xlabel('Istanti'); ylabel('acc Z');
     ylim(ax3,[5,15]);
 
-    pause(time);
+    pause(ms/1000);
 end
-    
