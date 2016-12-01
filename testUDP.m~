@@ -65,7 +65,7 @@ while 1
     alog = alog';
     
     %verifico il periodo di campionamento
-    ms = 1000*time/((c/3)-nternePrec);
+    ms = 1000*time/((c/3)-nternePrec)
     nternePrec = c/3;
    
     
@@ -86,7 +86,5 @@ while 1
     ylim(ax3,[5,15]);
 
     pause(ms/1000);
-    %aggiorno il grafico
-    
     tic
 end
